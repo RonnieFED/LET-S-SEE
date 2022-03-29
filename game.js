@@ -5,7 +5,7 @@ const progressBarfull = document.querySelector('#progressBarfull');
 
 let currentQuestion = {}
 const question = document.querySelector('#question');
-let acceptingAswers = true
+let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = {}
@@ -48,24 +48,25 @@ let availableQuestions = {}
  }
 
 getNewQuestion = () => {
-    if(availableQuestions.lenght === 0 || questionCounter > MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score)
     return window.location.assign('/end.html')
     }
 
  questionCounter++
- progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
- progressBarfull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
+ progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+ progressBarfull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
- const questionIndex = Math.floor(Math.random() * availableQuestions.lenght)
- currentQuestion = availableQuestions[questionsIndex]
+ const questionIndex = Math.floor(Math.random() * availableQuestions.length)
+ currentQuestion = availableQuestions[questionIndex]
  question.innerText = currentQuestion.question
 
  choices.forEach(choice =>{
      const number = choice.dataset['number']
+     console.log(number)
      choice.innerText = currentQuestion['choice' + number]
  })
- availableQuestions.splice(questionsIndex, 1)
+ availableQuestions.splice(questionIndex, 1)
  acceptingAnswers = true
 }
 choices.forEach(choice => 
@@ -80,7 +81,7 @@ choices.forEach(choice =>
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
-        selectedChoice.parentElement.classlist.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
