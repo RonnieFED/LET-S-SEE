@@ -1,0 +1,21 @@
+:root {
+    background-color: blueviolet;
+}
+.container {
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+h2 {
+    font-size: 10rem;
+    color: antiquewhite;
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    margin-top: 100rem;
+ }
