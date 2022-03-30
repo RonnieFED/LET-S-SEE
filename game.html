@@ -77,7 +77,7 @@ justify-center {
   }
   .hud-prefix{
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
   }
 
   .hud-main-text {
@@ -85,8 +85,8 @@ justify-center {
   }
 
   #progressBar {
-      width: 15rem;
-      height: 2rem;
+      width: 20rem;
+      height: 3rem;
       border: 0.2rem solid rgb(11,223,36);
       margin-top: 2rem;
       border-radius: 50px;
@@ -106,16 +106,16 @@ justify-center {
     </style>
 </head>
 <body>
-    <div class="container>"
+    <div class="container">
         <div id="game" class="justify center flex column">
             <div id="hud">
                 <div class="hud-item">
                     <p id="progressText" class="hud-prefix">
                         Question
-                      </p>
-                      <div id="progressBar">
-                          <div id="progressBarfull></div>
-                      </div>    
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarfull"></div>
+                    </div>    
                 </div>
                 <div class="hud-item">
                     <p class="hud-prefix">
@@ -125,19 +125,18 @@ justify-center {
                         0
                     </h1>
                 </div>
-           </div>  
-           <h1 id="question">What is the answer to this question?</h1>
-           <div class="choice-container">
-               <p class="choice-prefix">A</p>
-               <p class="choice-text" data-number="1">Choice 1</P>
-           </div>    
-           <div class="choice-container"> 
-               <p class="choice-prefix">B</p>
-               <p class="choice-text" data-number="2">Choice 2</p>
-           </div>
-           
-        </div>             
-   </div>  
+           </div> 
+        </div> 
+        <h1 id="question">What is the answer to this question?</h1>
+       <div class="choice-container">
+           <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1">Choice 1</P>
+        </div>    
+       <div class="choice-container"> 
+           <p class="choice-prefix">B</p>
+           <p class="choice-text" data-number="2">Choice 2</p>
+        </div>
+    </div>             
    <script src="game.js"></script>                
 </body>
 </html>
