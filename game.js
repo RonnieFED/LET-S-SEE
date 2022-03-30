@@ -64,7 +64,7 @@ getNewQuestion = () => {
  choices.forEach(choice =>{
      const number = choice.dataset['number']
      console.log(number)
-     choice.innerText = currentQuestion['choice' + number]
+     choice.innerText = currentQuestion['Choice' + number]
  })
  availableQuestions.splice(questionIndex, 1)
  acceptingAnswers = true
@@ -81,7 +81,7 @@ choices.forEach(choice =>
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
-        selectedChoice.parentElement.classList.add(classToApply)
+        selectedChoice.parentElement.classlist.add(classToApply)
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
