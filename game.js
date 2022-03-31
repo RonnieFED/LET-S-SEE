@@ -41,7 +41,7 @@ let availableQuestions = {}
  const MAX_QUESTIONS = 4
 
  startGame = () => {
-     questionCounter = 0
+     questionCounter = -1
      score = 0
      availableQuestions = [...questions]
      getNewQuestion()
@@ -69,7 +69,7 @@ getNewQuestion = () => {
  availableQuestions.splice(questionIndex, 1)
  acceptingAnswers = true
 }
-choices.forEach(choice => 
+choices.forEach(choice =>
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
