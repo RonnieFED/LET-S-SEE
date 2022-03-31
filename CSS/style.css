@@ -1,0 +1,74 @@
+:root{
+  background-color: rgb(29, 26, 26);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+h1 {
+  font-size: 5.4rem;
+  color: antiquewhite;
+  margin-bottom: 5rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  font-size: 2.4rem;
+  padding: 2rem 8rem 2rem 8rem;
+  text-decoration: none;
+  color: antiquewhite;
+  background: linear-gradient(18, 92, 255) 0%, rgb(0, 10, 255) 100%;
+  border-radius: 5px;
+}
+
+.btn-central{
+  margin: 6rem 0 10px 0;
+}
+
+.btn-adjust{
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.btn-1{
+  height: 8rem;
+}
+
+.btn-2{
+  height: 8rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 114, 244, 0.6);
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+#highscore-btn {
+  background: linear-gradient(90deg, rgb(255, 247,9)0%, rgb(240,223,6)100%);
+}
+#highscore-btn:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5);
+}

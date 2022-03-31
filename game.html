@@ -5,105 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ</title>
-    <style>
-        :root{
-    background-color: rgb(201, 67, 67);
-}
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 2rem;
-}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-justify-center {
-    justify-content: center;
-}
+    <link rel="stylesheet" href="./CSS/game.css">
 
-.text-center {
-    text-align: center;
-}
-        h1 {
-    font-size: 5.4rem;
-    color: antiquewhite;
-    margin-bottom: 5rem;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-        }
-        body {
-            color: aliceblue;
-        }
-        .choice-container {
-         display: flex;
-            margin-bottom: 0.8rem;
-            width: 100%;
-            border-radius: 4px;
-            background: rgb(18, 93, 255);
-            font-size: 3rem;
-            min-width: 80rem;
-        }
-        .choice-container:hover{
-            cursor: poiinter;
-            box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
-            transform: scale(1.02);
-            transition: transform 100ms;
-  }
-  .choice-prefix {
-      padding: 2rem 2.5rem;
-      color: antiquewhite;
-  }
-  .choice-text {
-      padding: 2rem;
-      width: 100%;
-  }
-  .correct {
-      background: linear-gradient(32deg, rgba(11, 223,36)0%, rgb(41, 232, 111)100%);
-  }
-  .incorrect {
-      background: linear-gradient(32deg, rgba(230, 29, 29, 1)0%, rgb(224, 11, 11, 1)100%);
-  }
-  /* heads up display */
-  #hud {
-      display: flex;
-      justify-content: space-between;
-  }
-  .hud-prefix{
-      text-align: right;
-      font-size: 2rem;
-  }
-
-  .hud-main-text {
-      text-align: right;
-  }
-
-  #progressBar {
-      width: 20rem;
-      height: 3rem;
-      border: 0.2rem solid rgb(11,223,36);
-      margin-top: 2rem;
-      border-radius: 50px;
-      overflow: hidden;
-  }
-  #progressBarfull {
-      height: 100%;
-      background:rgb(11,223,36);
-      width: 0%;
-
-  }
-  @media screen and (max-width: 768px) {
-      .choice-container{
-          min-width: 40rem;
-      }
-    }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -115,7 +18,7 @@ justify-center {
                     </p>
                     <div id="progressBar">
                         <div id="progressBarfull"></div>
-                    </div>    
+                    </div>
                 </div>
                 <div class="hud-item">
                     <p class="hud-prefix">
@@ -125,18 +28,18 @@ justify-center {
                         0
                     </h1>
                 </div>
-           </div> 
-        </div> 
+           </div>
+        </div>
         <h1 id="question">What is the answer to this question?</h1>
        <div class="choice-container">
            <p class="choice-prefix">A</p>
             <p class="choice-text" data-number="1">Choice 1</P>
-        </div>    
-       <div class="choice-container"> 
+        </div>
+       <div class="choice-container">
            <p class="choice-prefix">B</p>
            <p class="choice-text" data-number="2">Choice 2</p>
         </div>
-    </div>             
-   <script src="game.js"></script>                
+    </div>
+   <script src="game.js"></script>
 </body>
 </html>
